@@ -11,4 +11,4 @@ const app = new App([
   new UsersRoute(),
 ]);
 
-app.listen()
+app.listen();
