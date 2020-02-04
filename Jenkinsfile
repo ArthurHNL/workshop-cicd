@@ -71,7 +71,9 @@ pipeline {
             }
             post {
                 always {
-                    sh 'docker-compose -f docker-compose-e2e.yml down --rmi=all -v'
+                    dir ('ci/code') {
+                        sh 'docker-compose -f docker-compose-e2e.yml down --rmi=all -v'
+                    }
                 }
             }
         }
